@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Car Showroom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">AUTO<span>X</span></div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="darkBtn">🌙</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h1>Drive Your Dream Car</h1>
+            <p>
+                Explore premium sports cars with modern UI experience.
+            </p>
+
+            <button class="hero-btn">Explore Cars</button>
+        </div>
+
+    </section>
+
+
+    <!-- Cars Section -->
+    <section class="cars" id="cars">
+
+        <h2>Featured Cars</h2>
+
+        <div class="car-container">
+
+            <!-- Card 1 -->
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop" alt="BMW">
+
+                <h3>BMW M4</h3>
+                <p>₹1.5 Crore</p>
+
+                <button onclick="showMessage()">Book Now</button>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Audi">
+
+                <h3>Audi R8</h3>
+                <p>₹2.2 Crore</p>
+
+                <button onclick="showMessage()">Book Now</button>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="Mustang">
+
+                <h3>Mustang GT</h3>
+                <p>₹90 Lakhs</p>
+
+                <button onclick="showMessage()">Book Now</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="feature-box">
+            <div class="feature-card">
+                <h3>⚡ Fast Delivery</h3>
+                <p>Quick and secure delivery for premium customers.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🛡 Warranty</h3>
+                <p>Extended warranty support for all sports cars.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔥 Luxury Experience</h3>
+                <p>Premium quality and modern driving experience.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Book a Test Drive</h2>
+
+        <form>
+            <input type="text" placeholder="Enter Your Name" required>
+
+            <input type="email" placeholder="Enter Your Email" required>
+
+            <input type="text" placeholder="Favorite Car" required>
+
+            <textarea placeholder="Message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AUTOX Showroom | Frontend Project</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
