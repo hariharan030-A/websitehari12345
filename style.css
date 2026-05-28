@@ -1,15 +1,19 @@
+/* style.css */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial;
 }
 
 body{
     background: #111;
     color: white;
-    transition: 0.5s;
 }
+
+
+/* Navbar */
 
 header{
     width: 100%;
@@ -28,11 +32,8 @@ nav{
 }
 
 .logo{
-    font-size: 32px;
+    font-size: 35px;
     font-weight: bold;
-}
-
-.logo span{
     color: red;
 }
 
@@ -56,39 +57,38 @@ nav ul li a:hover{
     color: red;
 }
 
-#darkBtn{
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
+
+/* Hero Section */
 
 .hero{
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1400&auto=format&fit=crop');
-
-    background-size: cover;
-    background-position: center;
-
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    overflow: hidden;
 }
 
-.hero-text h1{
+#bg-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content h1{
     font-size: 70px;
     margin-bottom: 20px;
 }
 
-.hero-text p{
-    font-size: 22px;
+.hero-content p{
+    font-size: 24px;
     margin-bottom: 30px;
 }
 
-.hero-btn{
+.hero-content button{
     padding: 15px 35px;
     border: none;
     background: red;
@@ -99,23 +99,36 @@ nav ul li a:hover{
     transition: 0.3s;
 }
 
-.hero-btn:hover{
+.hero-content button:hover{
     transform: scale(1.1);
 }
 
-.cars{
-    padding: 100px 10%;
+
+/* Search */
+
+.search-section{
+    padding: 50px 10%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.cars h2{
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 45px;
+#searchInput,
+#brandFilter{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    flex: 1;
 }
 
-.car-container{
+
+/* Cars */
+
+.cars-container{
+    padding: 50px 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 40px;
 }
 
@@ -129,7 +142,7 @@ nav ul li a:hover{
 
 .car-card:hover{
     transform: translateY(-10px);
-    box-shadow: 0 0 25px red;
+    box-shadow: 0 0 20px red;
 }
 
 .car-card img{
@@ -138,9 +151,8 @@ nav ul li a:hover{
     object-fit: cover;
 }
 
-.car-card h3{
+.car-card h2{
     padding: 20px 20px 10px;
-    font-size: 28px;
 }
 
 .car-card p{
@@ -148,53 +160,38 @@ nav ul li a:hover{
     color: #ccc;
 }
 
-.car-card button{
-    margin: 0 20px 20px;
-    padding: 12px 25px;
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px;
+}
+
+.buttons button{
+    padding: 12px 20px;
     border: none;
     background: red;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.features{
-    padding: 100px 10%;
-    background: #181818;
+.fav-btn{
+    font-size: 25px;
+    background: transparent !important;
 }
 
-.features h2{
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 45px;
-}
 
-.feature-box{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.feature-card{
-    background: #222;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.feature-card:hover{
-    transform: scale(1.05);
-}
+/* Contact */
 
 .contact{
     padding: 100px 10%;
 }
 
-.contact h2{
+.contact h1{
     text-align: center;
     margin-bottom: 40px;
-    font-size: 45px;
+    font-size: 50px;
 }
 
 form{
@@ -220,36 +217,12 @@ form button{
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
 }
 
-footer{
-    background: black;
-    text-align: center;
-    padding: 20px;
-}
 
-.light-mode{
-    background: white;
-    color: black;
-}
+/* Responsive */
 
-.light-mode .car-card,
-.light-mode .feature-card,
-.light-mode .features{
-    background: #eee;
-    color: black;
-}
-
-.light-mode nav ul li a{
-    color: white;
-}
-
-@media(max-width: 768px){
-
-    .hero-text h1{
-        font-size: 45px;
-    }
+@media(max-width:768px){
 
     nav{
         flex-direction: column;
@@ -259,4 +232,268 @@ footer{
         margin-top: 20px;
     }
 
+    .hero-content h1{
+        font-size: 45px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
+    }
+    /* Add this at the bottom of style.css */
+
+
+/* Light Mode */
+
+.light-mode{
+    background: #f5f5f5;
+    color: black;
+}
+
+
+.light-mode header{
+    background: rgba(255,255,255,0.7);
+}
+
+
+.light-mode nav ul li a{
+    color: black;
+}
+
+
+.light-mode .car-card{
+    background: white;
+    color: black;
+}
+
+
+.light-mode .car-card p{
+    color: #333;
+}
+
+
+.light-mode .contact{
+    background: #eee;
+}
+
+
+.light-mode form input,
+.light-mode form textarea{
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+
+.light-mode .search-section{
+    background: #f5f5f5;
+}
+
+
+.light-mode #searchInput,
+.light-mode #brandFilter{
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+/* ABOUT PAGE */
+
+.about-page{
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.about-page h1{
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: red;
+}
+
+.about-page p{
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+.about-page img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px red;
+    transition: 0.5s;
+}
+
+.about-page img:hover{
+    transform: scale(1.03);
+}
+
+
+
+/* DETAILS PAGE */
+
+.details-page{
+    padding: 120px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.details-page img{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px red;
+}
+
+.details-text{
+    max-width: 500px;
+}
+
+.details-text h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.details-text p{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.details-text button{
+    padding: 15px 35px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.details-text button:hover{
+    transform: scale(1.1);
+}
+
+
+
+/* COMPARE PAGE */
+
+.compare-page{
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.compare-page h1{
+    font-size: 60px;
+    margin-bottom: 40px;
+    color: red;
+}
+
+.compare-page table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.compare-page th{
+    background: red;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+}
+
+.compare-page td{
+    padding: 20px;
+    background: #1c1c1c;
+    border-bottom: 1px solid #333;
+    font-size: 18px;
+}
+
+
+
+/* GALLERY PAGE */
+
+.gallery-page{
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.gallery-page h1{
+    font-size: 60px;
+    margin-bottom: 50px;
+    color: red;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 30px;
+}
+
+.gallery-grid img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.gallery-grid img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px red;
+}
+
+
+
+/* LOGIN PAGE */
+
+.login-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 0 30px rgba(255,0,0,0.3);
+}
+
+.login-form h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: red;
+}
+
+.login-form input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.login-form button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-form button:hover{
+    transform: scale(1.05);
+}
 }

@@ -1,146 +1,211 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Car Showroom</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Navbar -->
+
     <header>
+
         <nav>
-            <div class="logo">AUTO<span>X</span></div>
+
+            <div class="logo">
+                AUTOX
+            </div>
 
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cars">Cars</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
 
-            <button id="darkBtn">🌙</button>
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+                
+                    <li><a href="#cars">Cars</a></li>
+                
+                    <li><a href="gallery.html">Gallery</a></li>
+                
+                    <li><a href="about.html">About</a></li>
+                
+                    <li><a href="compare.html">Compare</a></li>
+                
+                    <li><a href="login.html">Login</a></li>
+                
+                </ul>
+
+            </ul>
         </nav>
+
     </header>
 
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
 
-        <div class="hero-text">
+    <section class="hero">
+
+        <video autoplay muted loop id="bg-video">
+
+            <source src="video.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero-content">
+
             <h1>Drive Your Dream Car</h1>
-            <p>
-                Explore premium sports cars with modern UI experience.
-            </p>
 
-            <button class="hero-btn">Explore Cars</button>
+            <p>Luxury cars with modern experience 🚗</p>
+
+            <button>Explore Cars</button>
+
         </div>
 
     </section>
+
+
+
+    <!-- Search + Filter -->
+
+    <section class="search-section">
+
+        <input type="text" id="searchInput" placeholder="Search Cars...">
+
+        <select id="brandFilter">
+
+            <option value="all">All Brands</option>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Mustang">Mustang</option>
+
+        </select>
+
+    </section>
+
 
 
     <!-- Cars Section -->
-    <section class="cars" id="cars">
 
-        <h2>Featured Cars</h2>
-
-        <div class="car-container">
-
-            <!-- Card 1 -->
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop" alt="BMW">
-
-                <h3>BMW M4</h3>
-                <p>₹1.5 Crore</p>
-
-                <button onclick="showMessage()">Book Now</button>
-            </div>
+    <section class="cars-container" id="cars">
 
 
-            <!-- Card 2 -->
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Audi">
+        <!-- Card 1 -->
 
-                <h3>Audi R8</h3>
-                <p>₹2.2 Crore</p>
+        <div class="car-card">
 
-                <button onclick="showMessage()">Book Now</button>
-            </div>
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop">
 
+            <h2>BMW M4</h2>
 
-            <!-- Card 3 -->
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="Mustang">
+            <p>₹1.5 Crore</p>
 
-                <h3>Mustang GT</h3>
-                <p>₹90 Lakhs</p>
+            <div class="buttons">
 
-                <button onclick="showMessage()">Book Now</button>
+                <button onclick="bookCar()">
+                    Book Now
+                </button>
+
+                <button class="fav-btn" onclick="favorite(this)">
+                    ❤️
+                </button>
+
             </div>
 
         </div>
-    </section>
 
 
-    <!-- Features Section -->
-    <section class="features" id="features">
 
-        <h2>Why Choose Us?</h2>
+        <!-- Card 2 -->
 
-        <div class="feature-box">
-            <div class="feature-card">
-                <h3>⚡ Fast Delivery</h3>
-                <p>Quick and secure delivery for premium customers.</p>
+        <div class="car-card">
+
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+
+            <h2>Audi R8</h2>
+
+            <p>₹2.2 Crore</p>
+
+            <div class="buttons">
+
+                <button onclick="bookCar()">
+                    Book Now
+                </button>
+
+                <button class="fav-btn" onclick="favorite(this)">
+                    ❤️
+                </button>
+
             </div>
 
-            <div class="feature-card">
-                <h3>🛡 Warranty</h3>
-                <p>Extended warranty support for all sports cars.</p>
+        </div>
+
+
+
+        <!-- Card 3 -->
+
+        <div class="car-card">
+
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop">
+
+            <h2>Mustang GT</h2>
+
+            <p>₹90 Lakhs</p>
+
+            <div class="buttons">
+
+                <button onclick="bookCar()">
+                    Book Now
+                </button>
+
+                <button class="fav-btn" onclick="favorite(this)">
+                    ❤️
+                </button>
+
             </div>
 
-            <div class="feature-card">
-                <h3>🔥 Luxury Experience</h3>
-                <p>Premium quality and modern driving experience.</p>
-            </div>
         </div>
 
     </section>
 
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
 
-        <h2>Book a Test Drive</h2>
+    <!-- Contact -->
+
+    <section class="contact">
+
+        <h1>Book Test Drive</h1>
 
         <form>
-            <input type="text" placeholder="Enter Your Name" required>
 
-            <input type="email" placeholder="Enter Your Email" required>
+            <input type="text" placeholder="Enter Name">
 
-            <input type="text" placeholder="Favorite Car" required>
+            <input type="email" placeholder="Enter Email">
 
             <textarea placeholder="Message"></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">
+                Submit
+            </button>
+
         </form>
 
     </section>
 
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 AUTOX Showroom | Frontend Project</p>
-    </footer>
+
+    <!-- Audio -->
+
+    <audio id="carSound" src="car.mp3"></audio>
 
 
     <script src="script.js"></script>
-    
 
 </body>
+<script src="script.js"></script>
 </html>
