@@ -496,4 +496,157 @@ form button{
 .login-form button:hover{
     transform: scale(1.05);
 }
+/* BIG PREMIUM FOOTER */
+
+footer{
+    background: linear-gradient(to right, #000000, #111111);
+    padding: 80px 10%;
+    text-align: center;
+    margin-top: 120px;
+    border-top: 4px solid red;
+}
+
+
+.footer-content h1{
+    color: red;
+    font-size: 60px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+
+.footer-content p{
+    color: #ccc;
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 35px;
+}
+
+
+.footer-links{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 22px;
+    transition: 0.4s;
+    position: relative;
+}
+
+
+.footer-links a:hover{
+    color: red;
+}
+
+
+.footer-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 3px;
+    background: red;
+    transition: 0.4s;
+}
+
+
+.footer-links a:hover::after{
+    width: 100%;
+}
+
+
+.social-icons{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.social-icons i{
+    color: white;
+    font-size: 35px;
+    margin: 0 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+.social-icons i:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+
+.copyright{
+    margin-top: 40px;
+    font-size: 16px;
+    color: gray;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+/* LIGHT MODE */
+
+.light-mode{
+    background: white;
+    color: black;
+}
+
+
+.light-mode header{
+    background: rgba(255,255,255,0.9);
+}
+
+
+.light-mode nav ul li a{
+    color: black;
+}
+
+
+.light-mode .logo{
+    color: red;
+}
+
+
+.light-mode .car-card{
+    background: #f1f1f1;
+    color: black;
+}
+
+
+.light-mode .car-card p{
+    color: #444;
+}
+
+
+.light-mode .contact{
+    background: white;
+}
+
+
+.light-mode input,
+.light-mode textarea,
+.light-mode select{
+    background: #eee;
+    color: black;
+}
+
+
+.light-mode footer{
+    background: #f1f1f1;
+}
+
+
+.light-mode .footer-links a{
+    color: black;
+}
+
+
+.light-mode .copyright{
+    color: #444;
+}
 }
